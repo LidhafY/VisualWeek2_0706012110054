@@ -60,6 +60,23 @@ class HomeActivity : AppCompatActivity(), Listener {
 
 
     }
+    override fun onVoiceClicked(posistion: Int){
+        if(Globvar.ListdataHewan.get(posistion).jenishewan.equals("Ayam")){
+            Toast.makeText(baseContext, "Bock Bock Bock", Toast.LENGTH_LONG).show()
+        }else if(Globvar.ListdataHewan.get(posistion).jenishewan.equals("Kambing")){
+            Toast.makeText(baseContext, "Mbekkkkk", Toast.LENGTH_LONG).show()
+        }else{
+            Toast.makeText(baseContext, "Moooooooooo", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    override fun onFeedClicked(posistion: Int) {
+        if(Globvar.ListdataHewan.get(posistion).jenishewan.equals("Ayam")){
+            Toast.makeText(baseContext, "Anda memberi makan biji-bijian", Toast.LENGTH_LONG).show()
+        }else{
+            Toast.makeText(baseContext, "Anda memberi makan rumput", Toast.LENGTH_LONG).show()
+        }
+    }
 
     override fun deleteOnClick(posistion: Int) {
         MaterialAlertDialogBuilder(this)

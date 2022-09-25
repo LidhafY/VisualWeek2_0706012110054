@@ -42,6 +42,12 @@ class adapter (val ListdataHewan: ArrayList<Hewan>, val listener: Listener):
             viewBind.delete.setOnClickListener{
                 listener1.deleteOnClick(position)
             }
+            viewBind.suarahewan.setOnClickListener {
+                listener1.onVoiceClicked(position)
+            }
+            viewBind.makan.setOnClickListener {
+                listener1.onFeedClicked(position)
+            }
 
 
             }

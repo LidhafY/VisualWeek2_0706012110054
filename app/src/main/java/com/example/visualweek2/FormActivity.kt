@@ -106,6 +106,16 @@ class FormActivity : AppCompatActivity() {
             viewbind.inputusia.error = ""
         }
 
+        if(hewan.jenishewan.isEmpty()){
+            if (viewbind.radioButton.isChecked == false){
+                viewbind.radioButton.error = "Jenis Hewan Belom terisi"
+            }else if(viewbind.radioButton2.isChecked == false){
+                viewbind.radioButton2.error = "Jenis hewan belom terisi"
+            }else{
+                viewbind.radioButton3.error = "Jenis hewan belom terisi"
+            }
+        }
+
         return isCompleted
     }
 }
